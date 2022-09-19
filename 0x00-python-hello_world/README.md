@@ -11,3 +11,8 @@ Enjoy!
 -
 - ## Tasks
 - * [0-run](0-run)
+- * [1-run_inline](1-run_inline)
+- * [2-print.py](2-print.py)
+- * [3-print_number.py](3-print_number.py)
+- * [4-print_float.py](4-print_float.py)
+- * [5-print_string.py](5-print_string.py)
