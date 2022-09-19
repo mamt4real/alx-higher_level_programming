@@ -16,3 +16,4 @@ Enjoy!
 - * [3-print_number.py](3-print_number.py)
 - * [4-print_float.py](4-print_float.py)
 - * [5-print_string.py](5-print_string.py)
+- * [9-easter_egg.py](9-easter_egg.py)
