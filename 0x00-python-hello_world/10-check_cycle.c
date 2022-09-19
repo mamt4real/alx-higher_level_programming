@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - finds the index at which a loop starts
- * @head: list head
+ * check_cycle - finds the index at which a loop starts
+ * @list: list head
  *
- * Description: mdldndkdbfkml
- * Return: pointer to loop start
+ * Return: 0 if no cycle 1 if there is cycle
  */
 int check_cycle(listint_t *list)
 {
