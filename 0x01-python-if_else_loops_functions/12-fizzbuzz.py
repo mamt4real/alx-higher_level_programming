@@ -14,9 +14,8 @@ def _getFiz(n):
 
 def fizzbuzz():
     """prints a fizz buzz from 1 to 100"""
-    for i in range(1, 100):
+    for i in range(1, 101):
         print(_getFiz(i), end=' ')
-    print(_getFiz(100), end='')
 
 
 if __name__ == '__main__':
