@@ -7,8 +7,8 @@ def uppercase(s):
         i = ord(c)
         if i in lower:
             i -= 32
-        print("{n:c}".format(n=i, end='')
-    print("".format())
+        print("{n:c}".format(n=i), end='')
+    print()
 
 
 if __name__ == '__main__':
