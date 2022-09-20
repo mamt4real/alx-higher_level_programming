@@ -3,7 +3,7 @@
 def remove_char_at(s, i):
     """removes a character at index i"""
     if i < 0:
-        i += len(s)
+        return s
     return s[:i] + s[i+1:]
 
 
