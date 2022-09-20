@@ -29,7 +29,10 @@ listint_t *insert_node(listint_t **head, int n)
 		prev = tmp;
 		tmp = tmp->next;
 	}
-	prev->next = new;
+	if (prev == tmp)
+		*head = new;
+	else
+		prev->next = new;
 	new->next = tmp;
 	return (new);
 }

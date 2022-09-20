@@ -6,7 +6,7 @@ def uppercase(s):
     for c in s:
         i = ord(c)
         if i in lower:
-            print(chr(i - 32), end='')
+            print("{n:c}".format(n=(i-32)), end='')
         else:
             print(c, end='')
     print()

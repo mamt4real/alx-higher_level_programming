@@ -3,4 +3,4 @@
 for i in range(97, 97 + 26):
     if i in (101, 113):
         continue
-    print(chr(i), end='')
+    print("{ch:c}".format(ch=i), end='')

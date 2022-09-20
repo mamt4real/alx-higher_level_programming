@@ -2,6 +2,6 @@
 
 def print_last_digit(n):
     """prints the last digit of a number"""
-    ld = n % 10
+    ld = abs(n) % 10
     print(ld, end='')
     return ld
