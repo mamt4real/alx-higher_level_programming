@@ -6,7 +6,7 @@ if __name__ == '__main__':
     args.pop(0)
     argc = len(args)
     line1 = "{:d} argument".format(argc)
-    if argc ==  0:
+    if argc == 0:
         line1 += "s."
     elif argc == 1:
         line1 += ":"
