@@ -13,4 +13,5 @@ how they are imported, both builtin and custom packages.
 * [5-variable_load.py](5-variable_load.py)
 * [100-my_calculator.py](100-my_calculator.py)
 * [101-easy_print.py](101-easy_print.py)
+* [102-magic_calculation.py](102-magic_calculation.py)
 * [103-fast_alphabet.py](103-fast_alphabet.py)
