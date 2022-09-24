@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def replace_in_list(my_list, idx, elem):
+def new_in_list(my_list, idx, elem):
     """
     replace an elment from a list at index idx with elem
     Args:

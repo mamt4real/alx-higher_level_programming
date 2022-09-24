@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
     x x x
     x x x
     x x x
-    __
+    --
 
     Args:
         matrix - a matrix of integers default [[]]
@@ -14,6 +14,7 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         fmt = " ".join(["{:d}" for x in row])
         print(fmt.format(*row))
+    print("--")
     print()
 
 
