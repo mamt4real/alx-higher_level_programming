@@ -14,8 +14,6 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         fmt = " ".join(["{:d}" for x in row])
         print(fmt.format(*row))
-    print("--")
-    print()
 
 
 if __name__ == '__main__':
