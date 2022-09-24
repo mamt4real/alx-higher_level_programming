@@ -20,3 +20,4 @@ Tuple: an immutable structure
 * [11-delete_at.py](11-delete_at.py)
 * [12-switch.py](12-switch.py)
 * [13-is_palindrome.c](13-is_palindrome.c)
+* [100-print_python_list_info.c](100-print_python_list_info.c)
