@@ -19,3 +19,7 @@ Set - unordered unique collection
 * [10-best_score.py](10-best_score.py)
 * [11-multiply_list_map.py](11-multiply_list_map.py)
 * [12-roman_to_int.py](12-roman_to_int.py)
+* [100-weight_average.py](100-weight_average.py)
+* [101-square_matrix_map.py](101-square_matrix_map.py)
+* [102-complex_delete.py](102-complex_delete.py)
+* [103-python.c](103-python.c)
