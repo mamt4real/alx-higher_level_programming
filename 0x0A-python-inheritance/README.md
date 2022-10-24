@@ -16,3 +16,5 @@ Some simple exercises to get us acquinted with the concept of inheritance in pyt
 * [9-rectangle.py](9-rectangle.py)
 * [10-square.py](10-square.py)
 * [11-square.py](11-square.py)
+* [100-my_int.py](100-my_int.py)
+* [101-add_attribute.py](101-add_attribute.py)

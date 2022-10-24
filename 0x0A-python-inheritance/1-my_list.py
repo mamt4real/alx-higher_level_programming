@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-
-"""Custome Classes"""
+''' Module: 1-my_list
+'''
 
 
 class MyList(list):
-    """A variant of list class"""
-
+    ''' Represents a MyList
+    '''
 
     def print_sorted(self):
-        """prints MyList in sorted form"""
+        '''
+        prints the list, but sorted
+        '''
         print(sorted(self))
-
-
-if __name__ == '__main__':
-    a = MyList()
-    a.append(6)
-    a.append(3)
-    a.append(4)
-    a.append(13)
-    print(a)
-    a.print_sorted()
