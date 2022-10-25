@@ -15,3 +15,4 @@ Here we will exerience the perks that came with modern HLLs whilst reminiscing t
 * [0x06-python-classes](0x06-python-classes)
 * [0x07-python-test_driven_development](0x07-python-test_driven_development)
 * [0x0A-python-inheritance](0x0A-python-inheritance)
+* [0x0B-python-input_output](0x0B-python-input_output)
