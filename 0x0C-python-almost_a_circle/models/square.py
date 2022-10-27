@@ -10,6 +10,5 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        tmp = super().__str__().split(" ")
-        tmp[-1] = str(self.width)
-        return " ".join(tmp)
+        tmp = super().__str__()
+        return tmp[:tmp.rfind('/')]
