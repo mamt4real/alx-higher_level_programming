@@ -2,6 +2,7 @@
 """ 2-main """
 from models.rectangle import Rectangle
 from models.square import Square
+from models.base import Base
 
 if __name__ == "__main__":
 
@@ -104,4 +105,80 @@ if __name__ == "__main__":
     print(s3)
     print(s3.area())
     s3.display()
+    s1 = Square(5)
+    print(s1)
+    print(s1.size)
+    s1.size = 10
+    print(s1)
 
+    try:
+        s1.size = "9"
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+    print('=' * 20)
+    s1 = Square(5)
+    print(s1)
+
+    s1.update(10)
+    print(s1)
+
+    s1.update(1, 2)
+    print(s1)
+
+    s1.update(1, 2, 3)
+    print(s1)
+
+    s1.update(1, 2, 3, 4)
+    print(s1)
+
+    s1.update(x=12)
+    print(s1)
+
+    s1.update(size=7, y=1)
+    print(s1)
+
+    s1.update(size=7, id=89, y=1)
+    print(s1)
+
+    print('=' * 10, "Task 13", "=" * 10)
+    r1 = Rectangle(10, 2, 1, 9)
+    print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
+
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)
+
+    print('=' * 10, "Task 14", "=" * 10)
+    s1 = Square(10, 2, 1)
+    print(s1)
+    s1_dictionary = s1.to_dictionary()
+    print(s1_dictionary)
+    print(type(s1_dictionary))
+
+    s2 = Square(1, 1)
+    print(s2)
+    s2.update(**s1_dictionary)
+    print(s2)
+    print(s1 == s2)
+    print('=' * 10, "Task 15", "=" * 10)
+
+    r1 = Rectangle(10, 7, 2, 8)
+    dictionary = r1.to_dictionary()
+    json_dictionary = Base.to_json_string([dictionary])
+    print(dictionary)
+    print(type(dictionary))
+    print(json_dictionary)
+    print(type(json_dictionary))
+
+    print('=' * 10, "Task 16", "=" * 10)
+    r1 = Rectangle(10, 7, 2, 8)
+    r2 = Rectangle(2, 4)
+    Rectangle.save_to_file([r1, r2])
+
+    with open("Rectangle.json", "r") as file:
+        print(file.read())

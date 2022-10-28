@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 
 """Defines the base model for all our classes"""
 
@@ -23,3 +24,21 @@ class Base:
         if val < low:
             op = ">" if low else ">="
             raise ValueError(f"{name} must be {op} {low}")
+
+    def to_json_string(list_dicts: list):
+        """Convert to Json strings"""
+        if list_dicts is None or list_dicts == []:
+            return "[]"
+        return json.dumps(list_dicts)
+
+    def save_to_file(cls, lst_objs: list):
+        """save instances to a file"""
+        json_str = ""
+        if lst_objs is None:
+            json_str = "[]"
+        else:
+            list_dicts = [x.to_dictionary() for x in lst_objs]
+            json_str = Base.to_json_string(list_dicts)
+        fname = type(cls).__name__ + ".json"
+        with open(fname, "w") as f:
+            f.write(json_str)

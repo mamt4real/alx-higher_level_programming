@@ -94,3 +94,12 @@ class Rectangle(Base):
                 self.__setattr__(key, val)
             else:
                 raise KeyError(f"Invalid keyword argument {key}")
+
+    def to_dictionary(self):
+        """Converts self to a dictionary"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x, "y": self.y
+        }
