@@ -45,3 +45,11 @@ class Square(Rectangle):
             "size": self.size,
             "x": self.x, "y": self.y
         }
+
+    def to_csv_str(self):
+        """returns a csv string of self"""
+        fmt = "{},{},{},{}"
+        return fmt.format(*(
+            self.id, self.size,
+            self.x, self.y
+        ))

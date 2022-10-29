@@ -103,3 +103,12 @@ class Rectangle(Base):
             "height": self.height,
             "x": self.x, "y": self.y
         }
+
+    def to_csv_str(self):
+        """returns a csv string of self"""
+        fmt = "{},{},{},{},{}"
+        return fmt.format(*(
+            self.id,
+            self.width, self.height,
+            self.x, self.y
+        ))
