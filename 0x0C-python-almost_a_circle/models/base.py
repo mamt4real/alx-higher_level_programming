@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import json
+import turtle as ttl
+from random import random as rn
+from time import sleep
 
 """Defines the base model for all our classes"""
 
@@ -119,3 +122,30 @@ class Base:
             ))
         except FileNotFoundError as fe:
             return []
+
+    def _draw_shape(shape, pen=ttl.Turtle()):
+        """Draws a shape using gui"""
+        pen.fillcolor(rn(), rn(), rn())
+        pen.up()
+        pen.setpos(shape.x * 10, shape.y * 10)
+        pen.down()
+        sizes = (shape.width * 10, shape.height * 10) * 2
+
+        pen.begin_fill()
+        for i in range(4):
+            pen.forward(sizes[i])
+            pen.right(90)
+        pen.end_fill()
+
+    def draw(squares, rectangles):
+        """Draw a list of squares and rectangles"""
+        shapes = (*squares, *rectangles)
+        wn = ttl.Screen()
+        wn.title('Squares and Rectangles')
+        wn.bgcolor('white')
+        pen = ttl.Turtle()
+        pen.setpos(0, 0)
+        for shape in shapes:
+            _draw_shape(shape, pen)
+        sleep(10)
+        ttl.bye()
