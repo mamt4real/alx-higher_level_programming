@@ -36,7 +36,7 @@ class Base:
 
     def to_json_string(list_dicts):
         """Convert to Json strings"""
-        if list_dicts is None or list_dicts == []:
+        if list_dicts is None or list_dicts == "[]":
             return "[]"
         return json.dumps(list_dicts)
 
