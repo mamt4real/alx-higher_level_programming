@@ -35,8 +35,8 @@ class Base:
         return str(self.id)
 
     def to_json_string(list_dicts):
-        """Convert to Json strings"""
-        if list_dicts is None or list_dicts == "[]":
+        """Convert list to Json strings"""
+        if list_dicts is None or len(list_dicts) == 0:
             return "[]"
         return json.dumps(list_dicts)
 
