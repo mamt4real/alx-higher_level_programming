@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""Defines a square model from rectangle"""
+"""Defines a square model from rectangle
+The rectangle class is also the super class
+of square"""
 
 from models.rectangle import Rectangle
 
@@ -9,6 +11,7 @@ class Square(Rectangle):
     """Square model: rectangle equal sides"""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """Initializes instance variables"""
         super().__init__(size, size, x, y, id)
 
     @property

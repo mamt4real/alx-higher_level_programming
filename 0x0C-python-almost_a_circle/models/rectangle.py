@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""Defines The Rectangle Model"""
+"""Defines The Rectangle Model
+Its base off of Base class"""
 
 from models.base import Base
 
@@ -10,6 +11,7 @@ class Rectangle(Base):
     width, height x and y"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes instance variables"""
         super().__init__(id)
         self.validate_size("width", width)
         self.validate_size("height", height)

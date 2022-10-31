@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# import turtle as ttl
+
+"""Defines the base model for all our classes
+All common functions are also defined in the class"""
+
 import json
 from random import random as rn
 from time import sleep
-
-"""Defines the base model for all our classes"""
 
 
 class Base:
@@ -22,6 +23,7 @@ class Base:
             self.id = id
 
     def validate_size(self, name, val, low=1):
+        """Validate sizes of shape"""
         if type(val) != int:
             raise TypeError(f"{name} must be an integer")
         if val < low:
