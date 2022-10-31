@@ -34,7 +34,7 @@ class Base:
         """a default csv serializer"""
         return str(self.id)
 
-    def to_json_string(list_dicts: list):
+    def to_json_string(list_dicts):
         """Convert to Json strings"""
         if list_dicts is None or list_dicts == []:
             return "[]"
@@ -49,7 +49,9 @@ class Base:
     @classmethod
     def create(cls, **kwargs):
         """Create an instance from a dict"""
-        _dummy = cls(1, 1, 1)
+        if kwargs is None:
+            return None
+        _dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         _dummy.update(**kwargs)
         return _dummy
 
