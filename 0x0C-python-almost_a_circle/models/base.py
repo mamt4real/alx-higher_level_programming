@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 # import turtle as ttl
+import json
 from random import random as rn
 from time import sleep
 
@@ -22,11 +22,11 @@ class Base:
             self.id = id
 
     def validate_size(self, name, val, low=1):
-        if not isinstance(val, int):
+        if type(val) != int:
             raise TypeError(f"{name} must be an integer")
         if val < low:
             op = ">" if low else ">="
-            raise ValueError(f"{name} must be {op} {low}")
+            raise ValueError(f"{name} must be {op} 0")
 
     def to_csv_str(self):
         """a default csv serializer"""

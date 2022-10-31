@@ -1,6 +1,8 @@
-from models.base import Base
+#!/usr/bin/python3
 
 """Defines The Rectangle Model"""
+
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -20,37 +22,45 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """defines getter for __width"""
         return self.__width
 
     @property
     def height(self):
+        """defines getter for __height"""
         return self.__height
 
     @property
     def x(self):
+        """defines getter for __x"""
         return self.__x
 
     @property
     def y(self):
+        """defines getter for __y"""
         return self.__y
 
     @width.setter
     def width(self, val):
+        """defines setter for __width"""
         self.validate_size("width", val)
         self.__width = val
 
     @height.setter
     def height(self, val):
+        """defines setter for __height"""
         self.validate_size("height", val)
         self.__height = val
 
     @x.setter
     def x(self, val):
+        """defines setter for __x"""
         self.validate_size("x", val, 0)
         self.__x = val
 
     @y.setter
     def y(self, val):
+        """defines setter for __y"""
         self.validate_size("y", val, 0)
         self.__y = val
 
@@ -88,12 +98,13 @@ class Rectangle(Base):
         if L > 4:
             self.y = args[4]
 
+        if L:
+            return
+
         valids = ("id", "height", "width", "x", "y")
         for key, val in kwargs.items():
             if key in valids:
                 self.__setattr__(key, val)
-            else:
-                raise KeyError(f"Invalid keyword argument {key}")
 
     def to_dictionary(self):
         """Converts self to a dictionary"""
