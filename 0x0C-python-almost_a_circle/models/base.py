@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import json
-import turtle as ttl
+# import turtle as ttl
 from random import random as rn
 from time import sleep
 
@@ -123,7 +123,7 @@ class Base:
         except FileNotFoundError as fe:
             return []
 
-    def _draw_shape(shape, pen=ttl.Turtle()):
+    def _draw_shape(shape, pen):
         """Draws a shape using gui"""
         pen.fillcolor(rn(), rn(), rn())
         pen.up()
