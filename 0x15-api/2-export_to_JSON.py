@@ -25,24 +25,28 @@ def get_user(userId: str):
     return res.json()
 
 
-def task_1(userId: str):
-    """Export user tasks to csv"""
+def task_2(userId: str):
+    """Export user tasks to json"""
     user = get_user(userId)
     if user == {}:
         return
     uname = user["username"]
     todos = get_todos(userId)
-    joined = "\n".join(map(
-        lambda t: f'"{userId}","{uname}","{t["completed"]}","{t["title"]}"',
+    tasks = list(map(
+        lambda t: {
+            "task": t["title"],
+            "completed": t["completed"],
+            "username": uname},
         todos
     ))
-    with open(f"{userId}.csv", "w") as f:
-        f.write(joined + "\n")
+    result = {userId: tasks}
+    with open(f"{userId}.json", "w") as f:
+        f.write(json.dumps(result))
 
 
 if __name__ == '__main__':
     try:
         userId = sys.argv[1]
-        task_1(userId)
+        task_2(userId)
     except IndexError:
         print("Usage: filenae <user_id>")
